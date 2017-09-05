@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace NextGreaterNoTest
 {
@@ -7,8 +6,9 @@ namespace NextGreaterNoTest
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void GivenSingleDigitNumber()
         {
+            Next
         }
     }
 }

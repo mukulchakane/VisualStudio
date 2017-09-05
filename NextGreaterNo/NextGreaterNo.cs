@@ -14,9 +14,7 @@ namespace NextGreaterNo
             Console.WriteLine("before");
             printNo(digits);
             NextGreater(digits);
-
         }
-
         private static void NextGreater(char[] digits)
         {
             int i;
@@ -48,16 +46,14 @@ namespace NextGreaterNo
                 swap(digits, i - 1, min);
 
                 // sort the digits
-                Array.Sort(digits, i, digits.Length-i);
+                Array.Sort(digits, i, digits.Length - i);
 
                 //print next greater no with same set of digits
                 Console.WriteLine("\nafter");
                 printNo(digits);
                 Console.ReadKey();
-
             }
         }
-
         private static void printNo(char[] digits)
         {
             for (int i = 0; i < digits.Length; i++)
@@ -65,7 +61,6 @@ namespace NextGreaterNo
                 Console.Write(digits[i]);
             }
         }
-
         private static void swap(char[] digits, int v, int min)
         {
             char temp = digits[v];
