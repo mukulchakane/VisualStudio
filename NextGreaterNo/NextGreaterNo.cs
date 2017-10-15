@@ -1,21 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NextGreaterNo
 {
-    class NextGreaterNo
+    public class NextGreaterNo
     {
-        static void Main(string[] args)
+        public char[] digits;
+        //static void Main(string[] args)
+        //{
+        //    //char[] digits = Console.ReadLine().ToCharArray();
+        //    //Console.WriteLine("before");
+        //    PrintNo(digits);
+        //    NextGreater(digits);
+        //}
+
+        public NextGreaterNo(string no)
         {
-            char[] digits = Console.ReadLine().ToCharArray();
-            Console.WriteLine("before");
-            printNo(digits);
-            NextGreater(digits);
+            digits = no.ToCharArray();
         }
-        private static void NextGreater(char[] digits)
+        public static void NextGreater(char[] digits)
         {
             int i;
             //Find the first digit that is smaller than the digit next to it.
@@ -43,25 +45,25 @@ namespace NextGreaterNo
                     }
                 }
                 //swap the numbers digits[i-1] and min
-                swap(digits, i - 1, min);
+                Swap(digits, i - 1, min);
 
                 // sort the digits
                 Array.Sort(digits, i, digits.Length - i);
 
                 //print next greater no with same set of digits
                 Console.WriteLine("\nafter");
-                printNo(digits);
+                PrintNo(digits);
                 Console.ReadKey();
             }
         }
-        private static void printNo(char[] digits)
+        private static void PrintNo(char[] digits)
         {
             for (int i = 0; i < digits.Length; i++)
             {
                 Console.Write(digits[i]);
             }
         }
-        private static void swap(char[] digits, int v, int min)
+        private static void Swap(char[] digits, int v, int min)
         {
             char temp = digits[v];
             digits[v] = digits[min];

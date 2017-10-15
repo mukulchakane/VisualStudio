@@ -8,7 +8,7 @@ namespace NextGreaterNoTest
         [TestMethod]
         public void GivenSingleDigitNumber()
         {
-            Next
+            return;
         }
     }
 }
